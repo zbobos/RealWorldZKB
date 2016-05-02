@@ -6,6 +6,7 @@ public class Course {
 	public static final int MAXSTUDENTS = 25;
 	// Create a new array instance and simultaneously assign the first 5 elements
 	public static String[] classYrNames = {"ImpossibleClassYear", "Freshman", "Sophomore", "Junior", "Senior", "Special"};
+	public static String[] LetterGrade = {"impossible", "C", "B", "A"};
 	// public static String classYrNames = new String[5];
 	// classYrNames[0] = "ImpossibleClassYr";
 	
@@ -14,6 +15,7 @@ public class Course {
 	private String teacher;
 	private Student[] students;
 	private String room;
+	
 	
 	/* Data members above, methods below */
 	
@@ -50,7 +52,7 @@ public class Course {
 		for (Student oneStudent: students) {
 			if (oneStudent == null)
 				break;
-			output += oneStudent.getName() + " " + oneStudent.getGender() + " " + classYrNames[oneStudent.getClassYr()] + " " + oneStudent.getAge() + "\n";
+			output += oneStudent.getName() + " " + oneStudent.getGender() + " " + classYrNames[oneStudent.getClassYr()] + " " + oneStudent.getAge()+ " " + LetterGrade[oneStudent.getLetterGrade()]  + oneStudent.getMonth() + oneStudent.getDay() + oneStudent.getYear() +"\n";
 			}
 		return output;
 	}
